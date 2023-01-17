@@ -1,0 +1,49 @@
+@page "/curriculum"
+@using Models
+@inject HttpClient Http
+
+<PageTitle>Curriculum Vitae</PageTitle>
+
+<div class="about">
+    <h2>About @name</h2>
+    @if (CurriculumVitae != null)
+        @CurriculumVitae.About
+</div>
+
+<div class="experiences">
+    <h2>Experiences</h2>
+    @if (CurriculumVitae?.Experiences != null)
+        @foreach (var experienceModel in CurriculumVitae.Experiences)
+        {
+                <Experience data=@experienceModel></Experience>
+        }
+</div>
+
+<div class="educations">
+    <h2>Education</h2>
+    @if (CurriculumVitae?.Educations != null)
+        @foreach (var educationModel in CurriculumVitae.Educations)
+        {
+            <Education data=@educationModel></Education>
+        }
+</div>
+
+<div class="skills">
+    <h2>Skills</h2>
+    @if (CurriculumVitae?.Skills != null)
+        @foreach (var skillModel in CurriculumVitae.Skills)
+        {
+            <Skill data=@skillModel></Skill>
+        }
+</div>
+
+@code 
+{
+    string name = "Luis Filipe Costa Miranda Brochado";
+    public ResumeModel? CurriculumVitae { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        CurriculumVitae = await Http.GetFromJsonAsync<ResumeModel>("sample-data/curriculum.json");
+    } 
+}

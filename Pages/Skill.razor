@@ -1,0 +1,12 @@
+﻿@using Models
+
+<div class="skill">
+  <h3>@if(data != null) @data?.Name</h3>
+  <span>@if(data != null) @data?.EstimatedLevel</span>
+  <span>@if(data != null) @data?.Description</span>
+</div>
+
+@code {
+  [Parameter]
+  public SkillModel? data { get; set; }
+}

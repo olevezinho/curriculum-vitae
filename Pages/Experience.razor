@@ -1,0 +1,13 @@
+@using Models
+
+<div class="experience">
+    <h3>@if(data != null) @data?.Title</h3>
+    <h4>@if(data != null) @data?.CompanyName (@data?.Tenure)</h4>
+    <div>@if(data != null) @data?.Description</div>
+</div>
+
+@code 
+{
+    [Parameter]
+    public ExperienceModel? data { get; set; }
+}
