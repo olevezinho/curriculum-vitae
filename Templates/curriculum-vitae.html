@@ -20,7 +20,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             /* height: 100vh; */
-            height: 500px;
+            height: 400px;
             margin: 0;
             padding: 0;
             display: flex;
@@ -28,7 +28,7 @@
             align-items: center;
             text-align: center;
         }
-    
+
         header::before {
             content: "";
             display: block;
@@ -40,7 +40,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
-    
+
         header::after {
             content: "";
             display: block;
@@ -55,10 +55,10 @@
             filter: grayscale(100%);
             z-index: -2;
         }
-    
+
         .circle {
             position: absolute;
-            top: 30%;
+            top: 25%;
             left: 15%;
             transform: translateX(-50%);
             width: 200px;
@@ -68,14 +68,14 @@
             border: 2px solid rgb(172, 172, 172);
             z-index: 1;
         }
-    
+
         .profile-pic {
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-    
+
         .text-container {
             position: absolute;
             left: 0;
@@ -85,7 +85,7 @@
             color: white;
             text-shadow: 1px 1px 1px black;
         }
-    
+
         .text-container div::before {
             content: "";
             display: block;
@@ -98,11 +98,11 @@
             background-color: rgba(255, 255, 255, 0.2);
             z-index: -1;
         }
-    
+
         .text-container h1 .waterblue {
             color: #089288;
         }
-    
+
         .text-container h1 {
             font-size: 4em;
             margin: 0;
@@ -110,7 +110,7 @@
             position: absolute;
             z-index: 1;
         }
-    
+
         .text-container h1::before {
             content: "";
             display: block;
@@ -122,11 +122,11 @@
             transform: translateY(-50%);
             z-index: -1;
         }
-    
+
         .text-container p .waterblue {
             color: #089288;
         }
-    
+
         .text-container p {
             font-size: 3.5em;
             margin: 0;
@@ -144,29 +144,50 @@
             border-bottom: 1px solid rgb(138, 136, 136);
             z-index: -1;
         }
-    
+
         .container {
             display: flex;
             flex-direction: row;
-            height: calc(100vh - 300px);
+            width: 100%;
+            /* height: calc(100vh - 50px); */
+            height: 2700px;
             /* subtract header height */
         }
+
         .left-column,
         .right-column {
-            width: 50%;
+            width: 100%;
             height: 100%;
-            padding: 20px;
             box-sizing: border-box;
         }
-    
+
         .left-column {
             background-color: rgba(211, 211, 211, 0.63);
+            border-right: 5px solid #ccc;
+            position: relative;
         }
-    
+
         .right-column {
-            background-color: #0892893d;
+            background-color: #fff;
+            position: relative;
         }
-    
+
+        .triangle {
+            width: 100%;
+            height: 100%;
+            border-top: 0px solid transparent;
+            border-bottom: 0px solid transparent;
+            border-left: 0px solid #19a09727;
+            position: absolute;
+            border-width: 350px 400px 400px 750px;
+            z-index: 1;
+        }
+
+        .text {
+            position: absolute;
+            padding: 20px;
+        }
+
         h1,
         p {
             color: white;
@@ -194,78 +215,52 @@
                 <p>.<span class="waterblue">NET</span> & Docker Programmer</p>
             </div>
         </div>
-        
+
         <!-- <img src="../img/curriculum-vitae/header.jpg" alt="Header" height="200" width="200"> -->
     </header>
 
-    <!-- <section>
-        <h2>Summary</h2>
-        <p>A brief summary of your professional experience, skills, and achievements.</p>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li>Degree, Institution, Year</li>
-            <li>Degree, Institution, Year</li>
-            <li>Degree, Institution, Year</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
-        <ul>
-            <li>Job Title, Company, Start-End Date</li>
-            <li>Job Title, Company, Start-End Date</li>
-            <li>Job Title, Company, Start-End Date</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
-            <li>Skill 3</li>
-        </ul>
-    </section> -->
-
     <div class="container">
         <div class="left-column">
-            <section>
-                <h2>Summary</h2>
-                <h3>A brief summary of your professional experience, skills, and achievements.</h3>
-            </section>
-        
-            <section>
-                <h2>Education</h2>
-                <ul>
-                    <li>Degree, Institution, Year</li>
-                    <li>Degree, Institution, Year</li>
-                    <li>Degree, Institution, Year</li>
-                </ul>
-            </section>
+            <div class="text">
+                <section>
+                    <h2>Summary</h2>
+                    <h3>A brief summary of your professional experience, skills, and achievements.</h3>
+                </section>
+    
+                <section>
+                    <h2>Education</h2>
+                    <ul>
+                        <li>Degree, Institution, Year</li>
+                        <li>Degree, Institution, Year</li>
+                        <li>Degree, Institution, Year</li>
+                    </ul>
+                </section>
+            </div>    
         </div>
+
         <div class="right-column">
-            <section>
-                <h2>Experience</h2>
-                <ul>
-                    <li>Job Title, Company, Start-End Date</li>
-                    <li>Job Title, Company, Start-End Date</li>
-                    <li>Job Title, Company, Start-End Date</li>
-                </ul>
-            </section>
-        
-            <section>
-                <h2>Skills</h2>
-                <ul>
-                    <li>Skill 1</li>
-                    <li>Skill 2</li>
-                    <li>Skill 3</li>
-                </ul>
-            </section>
+            <div class="triangle"></div>
+            <div class="text">
+                <section>
+                    <h2>Experience</h2>
+                    <ul>
+                        <li>Job Title, Company, Start-End Date</li>
+                        <li>Job Title, Company, Start-End Date</li>
+                        <li>Job Title, Company, Start-End Date</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <li>Skill 3</li>
+                    </ul>
+                </section>
+            </div>            
         </div>
-      </div>
+    </div>
 
 </body>
 
