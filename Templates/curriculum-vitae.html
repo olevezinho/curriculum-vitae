@@ -4,16 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Curriculum Vitae</title>
-    <!-- Styles -->
-    <!-- <style>
-        .header-image {
-            background-image: url('../img/curriculum-vitae/header.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            /* https://unsplash.com/@tomrdesigns */
-        }
-    </style> -->
+    <!-- /* https://unsplash.com/@tomrdesigns */ -->
     <style>
         header {
             position: relative;
@@ -156,7 +147,7 @@
 
         .left-column,
         .right-column {
-            width: 100%;
+            width: 50%;
             height: 100%;
             box-sizing: border-box;
         }
@@ -165,22 +156,40 @@
             background-color: rgba(211, 211, 211, 0.63);
             border-right: 5px solid #ccc;
             position: relative;
+            z-index: -2;
         }
 
         .right-column {
-            background-color: #fff;
+            background-color: #19a09727;
             position: relative;
+            z-index: -2;
         }
 
-        .triangle {
-            width: 100%;
-            height: 100%;
-            border-top: 0px solid transparent;
-            border-bottom: 0px solid transparent;
-            border-left: 0px solid #19a09727;
+        .triangle-top {
+            width: 0;
+            height: 0;
+            border-top: 400px solid transparent;
+            border-bottom: 0 solid transparent;
+            border-left: 750px solid #fff;
             position: absolute;
-            border-width: 350px 400px 400px 750px;
-            z-index: 1;
+            right: 0;
+            top: 0;
+            transform: rotate(180deg);
+            z-index: -1;
+        }
+
+        .triangle-bottom {
+            width: 0;
+            height: 0;
+            border-top: 0 solid transparent;
+            border-bottom: 400px solid transparent;
+            border-left: 750px solid #fff;
+            border-right: 0px solid transparent;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: rotate(180deg);
+            z-index: -1;
         }
 
         .text {
@@ -197,14 +206,6 @@
 </head>
 
 <body>
-
-    <!-- <div class="header-image">
-        <header>
-            <h1>Your Name</h1>
-            <p>Contact Information: Your Email and Phone Number</p>
-        </header>
-    </div> -->
-
     <header>
         <div class="circle">
             <img src="../img/curriculum-vitae/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
@@ -226,7 +227,7 @@
                     <h2>Summary</h2>
                     <h3>A brief summary of your professional experience, skills, and achievements.</h3>
                 </section>
-    
+
                 <section>
                     <h2>Education</h2>
                     <ul>
@@ -235,11 +236,11 @@
                         <li>Degree, Institution, Year</li>
                     </ul>
                 </section>
-            </div>    
+            </div>
         </div>
 
         <div class="right-column">
-            <div class="triangle"></div>
+            <div class="triangle-top"></div>
             <div class="text">
                 <section>
                     <h2>Experience</h2>
@@ -258,10 +259,10 @@
                         <li>Skill 3</li>
                     </ul>
                 </section>
-            </div>            
+            </div>
+            <div class="triangle-bottom"></div>
         </div>
     </div>
 
 </body>
-
 </html>
