@@ -1,5 +1,6 @@
 @page "/"
 @layout CustomLayout
+@inject NavigationManager Navigation
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -121,8 +122,10 @@
         .main-container {
             display: flex;
             flex-direction: row;
+            position: relative;
             width: 100%;
             height: 2700px;
+            z-index: 0;
         }
 
         .main-container h1 .black {
@@ -196,6 +199,7 @@
             width: 50%;
             height: 100%;
             box-sizing: border-box;
+            z-index: 1;
         }
 
         .left-column {
@@ -240,6 +244,13 @@
             z-index: -1;
         }
 
+        .credits {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            z-index: 0;
+        }
+
         .text {
             position: absolute;
             padding: 60px;
@@ -252,6 +263,7 @@
         .left-column .profile {
             padding: 10px;
             margin-bottom: 10px;
+            position: ;
         }
 
          .left-column .contact {
@@ -411,7 +423,7 @@
         <div class="left-column">
             <div class="text">
                 <h1>Profile</h1>
-                <section class="profile">
+                <div class="profile">
                     <p>
                         <span class="gray">
                         Cross-platform software developer experienced with object-oriented programming,
@@ -424,30 +436,40 @@
                             knowledge-hungry, eager to try new foods, meet people, and traveling.
                         </span>
                     </p>
-                </section>
+                </div>
 
                 <h1>Contact</h1>
-                <section class="contact">
+                <div class="contact">
                     <p>
                         <p>
-                            <MudIcon Icon="@Icons.Material.Filled.Mail" Size="Size.Large"/>
-                            <a href="mailto://lfilipecosta3@gmail.com"> lfilipecosta3@gmail.com</a>
+                            <MudButton Variant="Variant.Outlined"
+                                       Href="mailto://lfilipecosta3@gmail.com"
+                                       StartIcon="@Icons.Material.Filled.Mail"
+                                       IconSize="Size.Large">                                       
+                                lfilipecosta3@gmail.com
+                            </MudButton>
                         </p>
                         <p>
-                            <MudIcon Icon="@Icons.Custom.Brands.LinkedIn" Size="Size.Large"/>
-                            <a href="https://docs.microsoft.com/aspnet/"> /in/luis-filipe-costa-brochado-62b63bb7/</a>
+                            <MudButton Variant="Variant.Outlined"
+                                       Href="https://www.linkedin.com/in/luis-filipe-costa-brochado-62b63bb7/"
+                                       StartIcon="@Icons.Custom.Brands.LinkedIn"
+                                       IconSize="Size.Large">                                       
+                                /in/luis-filipe-costa-brochado-62b63bb7/
+                            </MudButton>
                         </p>
                         <p>
-                            <MudIcon Icon="@Icons.Material.Filled.Language" Size="Size.Large"/>
-                            @* <NavLink class="nav-link" href="https://linktr.ee/luiscostabrochado"> https://linktr.ee/luiscostabrochado</NavLink> *@
-                            @* <MudLink OnClick="" Href="https://linktr.ee/luiscostabrochado" Underline="Underline.Hover"> https://linktr.ee/luiscostabrochado</MudLink> *@
-                            <a href="https://linktr.ee/luiscostabrochado"> https://linktr.ee/luiscostabrochado</a>
+                            <MudButton Variant="Variant.Outlined"
+                                       Href="https://linktr.ee/luiscostabrochado"
+                                       StartIcon="@Icons.Material.Filled.Language"
+                                       IconSize="Size.Large">                                       
+                                https://linktr.ee/luiscostabrochado
+                            </MudButton>
                         </p>
                     </p>
-                </section>
+                </div>
 
                 <h1>Languages</h1>
-                <section class="languages">
+                <div class="languages">
                     <div class="language-container">
                         <h2 class="circles">English</h2>
                         <div class="circle-container">
@@ -478,10 +500,10 @@
                             <h4 class="circle-empty"></h4>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <h1>Education</h1>
-                <section class="education">
+                <div class="education">
                     <div class="education-container">
                         <h2 class="date">
                             20<span>12</span><br>
@@ -515,10 +537,10 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <h1>Academic projects</h1>
-                <section class="academic-projects">
+                <div class="academic-projects">
                     <div class="project-container">
                         <h2 class="date">
                             20<span>17</span>
@@ -719,17 +741,17 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <h1>Hobbies</h1>
-                <section class="hobbies"> 
+                <div class="hobbies"> 
                     <div class="hobbies-container">
-                        <img src="/curriculum-vitae/hobbies/gym.png" alt="Gym" style="width: 220px; height: 250px; margin-top: 50px; margin-left: -15px;" />
-                        <img src="/curriculum-vitae/hobbies/karate.png" alt="Karate" style="width: 200px; height: 280px; margin-top: 25px; margin-left: -15px;" />
-                        <img src="/curriculum-vitae/hobbies/reading.png" alt="Reading" style="width: 180px; height: 220px; margin-top: 60px; margin-left: 20px;" />
-                        <img src="/curriculum-vitae/hobbies/skateboarding.png" alt="Skateboarding" style="width: 185px; height: 250px; margin-top: 40px; margin-left: 30px" />
+                        <img src="/curriculum-vitae/hobbies/gym.png" alt="Gym" style="width: 19%; height: 19%; margin-top: 6%; margin-left: 4%;" />
+                        <img src="/curriculum-vitae/hobbies/karate.png" alt="Karate" style="width: 19%; height: 19%; margin-top: 3%; margin-left: 5%;" />
+                        <img src="/curriculum-vitae/hobbies/reading.png" alt="Reading" style="width: 14%; height: 14%; margin-top: 7%; margin-left: 7%;" />
+                        <img src="/curriculum-vitae/hobbies/skateboarding.png" alt="Skateboarding" style="width: 16%; height: 16%; margin-top: 5%; margin-left: 7%" />
                     </div>
-                </section>
+                </div>
             </div>
         </div>
 
@@ -738,7 +760,7 @@
 
             <div class="text">
                 <h1>Professional Experience</h1>
-                <section class="professional-experiences">
+                <div class="professional-experiences">
                     <div class="experience-container">
                         <h2 class="date">
                             20<span>18</span><br>
@@ -1092,57 +1114,10 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
 
                 <h1>Volunteering</h1>
-                <section class="volunteering">
-                    @* <div class="experience-container">
-                        <h2 class="date">
-                            20<span>17</span><br>
-                            20<span>17</span>
-                        </h2>
-                        <div class="experience">
-                            <div>
-                                <h2>UTAD Solutions Consulting</h2>
-                            </div>
-                            <div>
-                                <p>
-                                    Volunteer IT Manager<br>
-                                    March 2017 - October 2017
-                                </p>
-                            </div>
-                        </div>
-                        <h2 class="date">
-                            20<span>17</span><br>
-                            20<span>18</span>
-                        </h2>
-                        <div class="experience">
-                            <div>
-                                <h2>UTAD Solutions Consulting</h2>
-                            </div>
-                            <div>
-                                <p>
-                                    Marketing Director<br>
-                                    November 2017 - May 2018
-                                </p>
-                            </div>
-                        </div>
-                        <h2 class="date">
-                            20<span>18</span><br>
-                            20<span>19</span>
-                        </h2>
-                        <div class="experience">
-                            <div>
-                                <h2>UTAD Solutions Consulting</h2>
-                            </div>
-                            <div>
-                                <p>
-                                    External Vice-President<br>
-                                    June 2018 - February 2019
-                                </p>
-                            </div>
-                        </div>
-                    </div> *@
+                <div class="volunteering">
                     <div class="experience-container">
                         <h2 class="date">
                             20<span>17</span><br>
@@ -1195,10 +1170,11 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
             </div> 
 
             <div class="triangle-bottom"></div>
+            <div class="credits">Made with <MudIcon Icon="@Icons.Material.Filled.FavoriteBorder" Size="Size.Small"/> and <MudIcon Icon="@Icons.Custom.Brands.MudBlazor" Size="Size.Small"/> <MudIcon Icon="@Icons.Custom.Brands.MicrosoftVisualStudio" Size="Size.Small"/> <MudIcon Icon="@Icons.Custom.Brands.Linux" Size="Size.Small"/> <MudIcon Icon="@Icons.Material.Filled.Html" Size="Size.Small"/> <MudIcon Icon="@Icons.Material.Filled.Css" Size="Size.Small"/></div>
         </div>
     </div>
 </body>
