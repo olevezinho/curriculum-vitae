@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "luiscostabrochado",
+    "classifications": [ "Common", "Blazor" ],
+    "identity": "CurriculumVitae",
+    "name": "Example templates: curriculum vitae",
+    "shortName": "curriculumvitae",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    }
+  }
