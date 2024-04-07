@@ -444,8 +444,7 @@
         /*********       *********/
         /*************************/ *@
 
-        @@media (min-width: 250
-px) and (max-width: 375px) {
+        @@media (max-width: 375px) {
             
         @* /********************/
            /****** Header ******/
@@ -690,6 +689,14 @@ px) and (max-width: 375px) {
          @* /********************/
             /* Left column text */
             /********************/ *@
+
+            .left-column .circle-container {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                width: calc(40vw + 5px);
+                margin-left: 1px;
+            }
 
             .left-column .hobbies {
                 padding: 10px;
