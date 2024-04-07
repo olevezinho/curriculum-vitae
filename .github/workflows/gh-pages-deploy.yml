@@ -19,6 +19,10 @@ jobs:
       with:
         dotnet-version: 8.0.100
 
+    # changes the base-image-path in CustomPage.razor from '/curriculum-vitae/' to '../curriculum-vitae/' to match base blazor template
+    - name: Change base-tage in index.html from / to curriculum-vitae
+      run: sed -i 's/\/curriculum-vitae\//..\/curriculum-vitae\//g' Pages/CustomPage.razor
+
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core project
       run: dotnet publish -c Release -o release --nologo
