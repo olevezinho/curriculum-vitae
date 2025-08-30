@@ -463,6 +463,14 @@
                 text-align: center;
             }
 
+            @* header .background-image {
+                display: block;
+                z-index: -2;
+                filter: grayscale(100%);
+                width: 100%;
+                height: 100%;
+            } *@
+
             header::before {
                 content: "";
                 display: block;
@@ -483,7 +491,7 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                background-image: url('/curriculum-vitae/header.jpg');
+                background-image: url('/curriculum-vitae/header.webp');
                 background-position: center top 0px;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -795,6 +803,12 @@
                 text-align: center;
             }
 
+            @* header .background-image {
+                display: block;
+                z-index: -2;
+                filter: grayscale(100%);
+            } *@
+
             header::before {
                 content: "";
                 display: block;
@@ -815,7 +829,7 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                background-image: url('/curriculum-vitae/header.jpg');
+                background-image: url('/curriculum-vitae/header.webp');
                 background-position: center top 0px;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -1145,6 +1159,14 @@
                 text-align: center;
             }
 
+            header .background-image {
+                display: block;
+                z-index: -2;
+                filter: grayscale(100%);
+                width: 100%;
+                margin-bottom: 880px;
+            }
+
             header::before {
                 content: "";
                 display: block;
@@ -1165,7 +1187,7 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                background-image: url('/curriculum-vitae/header.jpg');
+                background-image: url('/curriculum-vitae/header.webp');
                 background-position: center top 0px;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -1495,6 +1517,12 @@
                 text-align: center;
             }
 
+            @* header .background-image {
+                display: block;
+                z-index: -2;
+                filter: grayscale(100%);
+            } *@
+
             header::before {
                 content: "";
                 display: block;
@@ -1515,7 +1543,7 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                background-image: url('/curriculum-vitae/header.jpg');
+                background-image: url('/curriculum-vitae/header.webp');
                 background-position: center top 0px;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -1838,6 +1866,14 @@
                 text-align: center;
             }
 
+            @* header .background-image {
+                display: block;
+                z-index: -2;
+                filter: grayscale(100%);
+                width: 100%;
+                margin-bottom: 880px;
+            } *@
+
             header::before {
                 content: "";
                 display: block;
@@ -1858,7 +1894,7 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                background-image: url('/curriculum-vitae/header.jpg');
+                background-image: url('/curriculum-vitae/header.webp');
                 background-position: center top 0px;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -2169,7 +2205,7 @@
         /*********       *********/
         /*************************/ *@
 
-        @@media (min-width: 1368.05px) and (max-width: 1860px) {
+        @@media (min-width: 1368.05px) and (max-width: 4096px) {
         
      @* /********************/
         /** Main container **/
@@ -2189,10 +2225,11 @@
     </style>
 </head>
 
-<body>
+<body style="overflow-x: hidden">
     <header>
+        @* <img fetchpriority="high" class="background-image" src="/curriculum-vitae/header.webp"  alt="Background image"> *@
         <div class="circle">
-            <img src="/curriculum-vitae/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+            <img src="/curriculum-vitae/profile-pic.webp" fetchpriority="high" alt="Profile Picture" class="profile-pic">
         </div>
         <div class="text-container">
             <div>
@@ -2200,6 +2237,7 @@
                 <p>.<span class="waterblue">NET</span> & Docker Programmer</p>
             </div>
         </div>
+    
     </header>
 
     <div class="main-container">
@@ -2529,10 +2567,10 @@
                 <h1>Hobbies</h1>
                 <div class="hobbies"> 
                     <div class="hobbies-container">
-                        <img class="gym" src="/curriculum-vitae/hobbies/gym.png" alt="Gym" />
-                        <img class="karate" src="/curriculum-vitae/hobbies/karate.png" alt="Karate" />
-                        <img class="reading" src="/curriculum-vitae/hobbies/reading.png" alt="Reading" />
-                        <img class="skateboarding" src="/curriculum-vitae/hobbies/skateboarding.png" alt="Skateboarding" />
+                        <img class="gym" src="/curriculum-vitae/hobbies/gym.webp" alt="Gym" />
+                        <img class="karate" src="/curriculum-vitae/hobbies/karate.webp" alt="Karate" />
+                        <img class="reading" src="/curriculum-vitae/hobbies/reading.webp" alt="Reading" />
+                        <img class="skateboarding" src="/curriculum-vitae/hobbies/skateboarding.webp" alt="Skateboarding" />
                     </div>
                 </div>
             </div>
