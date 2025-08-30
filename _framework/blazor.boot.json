@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CurriculumVitae",
   "resources": {
-    "hash": "sha256-OrvaIuYLYfFwvswXpt2z1dpRRtY+u0wRM9HXQQwh7XQ=",
+    "hash": "sha256-/FgDpBgPbMErrorr6+UcQm22ER7Owjb7QhyUF/sUT/Q=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -11,13 +11,8 @@
     "wasmNative": {
       "dotnet.native.wasm": "sha256-Vr6ZXKoP77zgabrMIxQ1GbOkrxfx5XGqHO0odLhUIMY="
     },
-    "icu": {
-      "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
-      "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
-      "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
-    },
     "assembly": {
-      "CurriculumVitae.wasm": "sha256-Iq1US+i7DVXmr3Bk2RnaYaNRAmRYZhPU7+Qwp1YZ+Bw=",
+      "CurriculumVitae.wasm": "sha256-KPYAYpi4XWI4rbVfRPJnxk/Pd+qPtq30wFHFyZjxQPM=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-uJOhVmwLvl9PpFHwxprnEXnMyaP3brXgdPFmVOIUiOA=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-CSOSBPUoZLJqDShs3DjhTM8AQVhlMZc91EY8T6M3EBc=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-0Za6xSc4m/AZZ0cHcT2sbleznrkmEE2Mkyo1CL/J/tM=",
@@ -46,7 +41,7 @@
       "System.Net.Http.wasm": "sha256-TW+R/9ZQjo0P5f/2dW64x5N9qU2TArQ0lBXZRc7Oivk=",
       "System.Net.Primitives.wasm": "sha256-bo1gfuHZsgQyxWH2Favd8eHySb2ogILJUiH+LG7ewjI=",
       "System.ObjectModel.wasm": "sha256-9OeeAK/2+x6/X0qAHG6KljR19EBpeqVYe98C2jYik08=",
-      "System.Private.CoreLib.wasm": "sha256-jwVv8w1XlXV8fAPDPd13gH5usCS0fMC9ivwLri/mDYA=",
+      "System.Private.CoreLib.wasm": "sha256-10BuUqv3Tj5hMJUsGMaOZp6oOgqJZZvwe56qprLYy8M=",
       "System.Private.Uri.wasm": "sha256-oXhuPYKX5wH3llYywJ+yTr/uWFJp/xRkzx/RgYVd8Nc=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-8v1T2sHtPVF+DFfHC56eeBb2CK3E+CJ2i/u+8hAjWtU=",
       "System.Runtime.wasm": "sha256-fHLoG9sDjMv4jOANsqn0JKlB6vB1AvxUUosenfH1ccI=",
@@ -58,7 +53,7 @@
   "cacheBootResources": true,
   "debugLevel": 0,
   "linkerEnabled": true,
-  "globalizationMode": "sharded",
+  "globalizationMode": "invariant",
   "extensions": {
     "blazor": {}
   }
