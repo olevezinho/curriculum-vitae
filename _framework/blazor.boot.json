@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CurriculumVitae",
   "resources": {
-    "hash": "sha256-/FgDpBgPbMErrorr6+UcQm22ER7Owjb7QhyUF/sUT/Q=",
+    "hash": "sha256-vTKZLV/lq3G3dl4xqlMPSbycOX6kzmarkFAwaDBU1No=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -12,7 +12,7 @@
       "dotnet.native.wasm": "sha256-Vr6ZXKoP77zgabrMIxQ1GbOkrxfx5XGqHO0odLhUIMY="
     },
     "assembly": {
-      "CurriculumVitae.wasm": "sha256-KPYAYpi4XWI4rbVfRPJnxk/Pd+qPtq30wFHFyZjxQPM=",
+      "CurriculumVitae.wasm": "sha256-gN38FxN0GzKHspb30tiDDI5OTrecUN8B8ULYQtrTbo4=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-uJOhVmwLvl9PpFHwxprnEXnMyaP3brXgdPFmVOIUiOA=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-CSOSBPUoZLJqDShs3DjhTM8AQVhlMZc91EY8T6M3EBc=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-0Za6xSc4m/AZZ0cHcT2sbleznrkmEE2Mkyo1CL/J/tM=",
